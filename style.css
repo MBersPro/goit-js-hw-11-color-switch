@@ -22,3 +22,21 @@ body{
     color: white;
     cursor: not-allowed;
 }
+
+.is-hidden {
+    visibility: hidden;
+}
+
+.is-visible {
+    visibility: visible;
+}
+
+.kaif__button {
+    display: block;
+    margin-left: 100;
+    width: 300px;
+    height: 100px;
+}
+.imgg {
+    text-align: center;
+}

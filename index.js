@@ -24,6 +24,8 @@ refs.buttonStart.addEventListener("click", () => {
     }, 150);
     refs.buttonStop.style.cursor = "pointer";
     refs.buttonStart.style.cursor = "not-allowed";
+    buttonKaif.classList.replace("is-hidden", "is-visible")
+    
 });
 
 refs.buttonStop.addEventListener("click", () => {
@@ -31,4 +33,28 @@ refs.buttonStop.addEventListener("click", () => {
     refs.buttonStart.style.cursor = "pointer";
     refs.buttonStop.style.cursor = "not-allowed";
     clearInterval(interval);
+    buttonKaif.classList.replace("is-visible", "is-hidden");
+    music.pause();
+});
+
+
+
+
+
+
+
+const music = document.querySelector("#music")
+const buttonKaif = document.querySelector("#button__kaif");
+
+const bImg = document.querySelector("#bimg")
+const oImg = document.querySelector("#oimg");
+
+const something = () => {
+    bimg.classList.replace("is-hidden", "is-visible");
+    oimg.classList.replace("is-hidden", "is-visible");
+}
+
+buttonKaif.addEventListener("click", () => {
+    music.play();
+    setTimeout(something, 9400);
 });
