@@ -1,3 +1,24 @@
-.all__buttons {
+body{
+    background:  rgb(73, 79, 95);
+}
+.all__buttons{
     text-align: center;
+}
+#button__start{
+    background: rgb(61, 59, 59);
+    border: 1px solid black;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#button__stop{
+    background: rgb(61, 59, 59);
+    border: 1px solid black;
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    cursor: not-allowed;
 }
