@@ -18,24 +18,32 @@ const randomIntegerFromInterval = (min, max) => {
 };
 
 refs.buttonStart.addEventListener("click", () => {
-    refs.buttonStart.disabled = true;
+    //refs.buttonStart.disabled = true;
+    //refs.buttonStop.style.cursor = "pointer";
+    //refs.buttonStart.style.cursor = "not-allowed";
+    changer(true, "pointer", "not-allowed")
     interval = setInterval(() => {
         refs.bodyNode.style.background = colors[randomIntegerFromInterval(0, colors.length)];
     }, 150);
-    refs.buttonStop.style.cursor = "pointer";
-    refs.buttonStart.style.cursor = "not-allowed";
     buttonKaif.classList.replace("is-hidden", "is-visible")
     
 });
 
 refs.buttonStop.addEventListener("click", () => {
-    refs.buttonStart.disabled = false;
-    refs.buttonStart.style.cursor = "pointer";
-    refs.buttonStop.style.cursor = "not-allowed";
+    //refs.buttonStart.disabled = false;
+    //refs.buttonStart.style.cursor = "pointer";
+    //refs.buttonStop.style.cursor = "not-allowed";
+    changer(false, "not-allowed", "pointer");
     clearInterval(interval);
     buttonKaif.classList.replace("is-visible", "is-hidden");
     music.pause();
 });
+
+function changer(bulian, pointer, notAllowed) {
+    refs.buttonStart.disabled = bulian;
+    refs.buttonStop.style.cursor = pointer;
+    refs.buttonStart.style.cursor = notAllowed;
+}
 
 
 
